@@ -1,4 +1,4 @@
-#!/bin/bash
+
 #include stdio.h>
  /**
   * main -  program that prints exactly a line with puts function
