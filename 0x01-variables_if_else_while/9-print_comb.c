@@ -4,7 +4,8 @@
  * main - Entry point
  *
  * Description: Prints all possible combinations of single-digit numbers,
- * separated by ", ", in ascending order using putchar function.
+ * separated by ", ", in ascending order using putchar function
+ * with only 4 calls.
  *
  * Return: Always 0 (Success)
  */
@@ -18,16 +19,10 @@ for (j = i + 1; j <= 9; j++)
 {
 putchar(i + '0');
 putchar(j + '0');
-
-if (i < 8 || j < 9)
-{
-putchar(',');
-putchar(' ');
+putchar((i == 8 && j == 9) ? '\n' : ',');
+putchar((i == 8 && j == 9) ? '\0' : ' ');
 }
 }
-}
-
-putchar('\n');
 
 return (0);
 }
