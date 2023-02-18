@@ -3,27 +3,26 @@
 /**
  * main - Entry point
  *
- * Description: Prints all possible combinations of single-digit numbers,
- * separated by ", ", in ascending order using putchar function
- * with only 4 calls.
+ * Description: Prints the numbers 0 to 9, separated by ", ",
+ * in ascending order using putchar function with only 4 calls.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int i, j;
+int i;
 
-for (i = 0; i < 9; i++)
-{
-for (j = i + 1; j <= 9; j++)
+for (i = 0; i < 10; i++)
 {
 putchar(i + '0');
-putchar(j + '0');
-putchar((i == 8 && j == 9) ? '\n' : ',');
-putchar((i == 8 && j == 9) ? '\0' : ' ');
+
+if (i != 9)
+{
+putchar(',');
+putchar(' ');
 }
 }
 
-return (0);
+putchar('\n');
+return 0;
 }
-
