@@ -12,21 +12,21 @@
 
 int main(void)
 {
-int count, i;
-long int fib1 = 1, fib2 = 2, fib_next;
+	int i = 0;
+	long j = i, k = 2;
 
-printf("%ld, %ld", fib1, fib2);
-
-for (count = 3; count <= 50; count++)
-{
-fib_next = fib1 + fib2;
-printf(", %ld", fib_next);
-fib1 = fib2;
-fib2 = fib_next;
+	while (i < 50)
+	{
+		if (i == 0)
+			printf(", %ld", k);
+		else
+		{
+			k += j;
+			j = k - j;
+			printf(", %ld", k);
+		}
+		++1;
+	}
+	printf("\n");
+	return (0);
 }
-
-printf("\n");
-
-return (0);
-}
-
