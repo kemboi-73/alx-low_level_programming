@@ -8,7 +8,7 @@
  */
 void rev_string(char *s)
 {
-	int len = 0, i;	
+	int len = 0, i;
 	char temp;
 
 	/* find length of the string */
