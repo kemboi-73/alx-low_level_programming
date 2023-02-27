@@ -29,6 +29,6 @@ int i = 0, sign = 1, result = 0, found = 0;
 	i++;
 }
 
-return (result * signi);
+return (result * sign);
 }
 
