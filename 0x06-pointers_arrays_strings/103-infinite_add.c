@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 /**
- * infinite_add - adds two numbers 
+ * infinite_add - adds two numbers
  * @n1: first number.
  * @n2: Second number
  * @r: buffer that the function will use to store the result.
@@ -32,7 +32,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		op = dr1 + dr2 + add;
 		if (op >= 10)
 			add = op / 10;
-		else 
+		else
 			add = 0;
 		if (op > 0)
 			*(r + bg) = (op % 10) + 48;
