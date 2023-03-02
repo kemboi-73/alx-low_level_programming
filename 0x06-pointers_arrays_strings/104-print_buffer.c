@@ -20,10 +20,10 @@ void print_buffer(char *b, int size)
 			printf("%.8x:", j);
 			for (k = j; k < j + 10; k++)
 			{
-				if (k % 2 = 0)
+				if (k % 2 == 0)
 					printf(" ");
 				if (k < size)
-					printf("%.zx", *(b + k));
+					printf("%.2x", *(b + k));
 				else
 					printf(" ");
 			}
