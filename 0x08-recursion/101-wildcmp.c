@@ -2,7 +2,7 @@
 
 /**
  * wildcmp - compares 2 strings
- * @s1: first string 
+ * @s1: first string
  * @s2: second string
  * Return: 1 if s1 and s2 are identical, and 0 otherwise.
  */
