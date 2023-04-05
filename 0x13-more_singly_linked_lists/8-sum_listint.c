@@ -13,7 +13,7 @@ if (!head)
 
 return (sum);
 
-while (head)
+	while (head)
 
 	{
 		sum += head->n;
