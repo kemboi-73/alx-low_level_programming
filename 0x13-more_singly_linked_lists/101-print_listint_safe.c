@@ -1,59 +1,43 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
+
 /**
- * add_nodeptr - add an element at the beginning of a list of pointers
- * @head: a pointer to a pointer to the first node
- * @p: the element to add
+ * print_listint_safe - Prints a listint_t linked list.
+ * @head: Pointer to the head node of the list.
  *
- * Return: If memory allocation fails or head is NULL, return NULL.
- * Otherwise, return the address of the new node.
+ * Return: The number of nodes in the list.
  */
-listptr_t *add_nodeptr(listptr_t **head, const listint_t *p)
+size_t print_listint_safe(const listint_t *head)
 {
-	listptr_t *new;
+size_t count = 0;
+const listint_t *current, *loop_node;
 
-	if (!head)
-		return (NULL);
-
-	new = malloc(sizeof(listptr_t));
-	if (!new)
-		return (NULL);
-
-	new->p = p;
-	new->next = *head;
-	*head = new;
-
-	return (new);
-}
-
-
-/**
- * listptr_contains - check if a list of pointers contains an element
- * @head: a pointer to the first node
- * @p: the element to find
- *
- * Return: 1 if p is in the list, otherwise 0
- */
-int listptr_contains(const listptr_t *head, const listint_t *p)
+current = head;
+while (current != NULL)
 {
-	if (!head)
-		return (0);
+count++;
+printf("[%p] %d\n", (void *)current, current->n);
 
-	return (p == head->p || listptr_contains(head->next, p));
-
-}
-
-
-/**
- * free_listptr - free a linked list of pointers
- * @head: a pointer to the first node
- */
-void free_listptr(listptr_t *head)
+if (current->next >= current)
 {
-	if (head)
-	{
-		free_listptr(head->next);
-		free(head);
+loop_node = current->next;
+while (loop_node != current)
+{
+count++;
+printf("[%p] %d\n", (void *)loop_node, loop_node->n);
+loop_node = loop_node->next;
 	}
+printf("-> [%p] %d\n", (void *)current, current->n);
+break;
 }
+
+current = current->next;
+	}
+
+if (current == NULL)
+return (count);
+else
+exit(98);
+}
+
