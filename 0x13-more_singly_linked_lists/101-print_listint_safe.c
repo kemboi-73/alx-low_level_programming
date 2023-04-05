@@ -57,7 +57,3 @@ void free_listptr(listptr_t *head)
 		free(head);
 	}
 }
-
-
-/**
-

@@ -53,6 +53,8 @@ int is_linked(const listint_t *head, const listint_t *node);
 listptr_t *add_nodeptr(listptr_t **head, const listint_t *p);
 int listptr_contains(const listptr_t *head, const listint_t *p);
 void free_listptr(listptr_t *head);
-
+size_t free_listint_safe(listint_t **h);
+size_t print_listint_safe(const listint_t *head);
+listint_t *find_listint_loop(listint_t *head);
 #endif
 
