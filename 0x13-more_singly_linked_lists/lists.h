@@ -30,7 +30,7 @@ typedef struct listptr_s
 	const listint_t *p;
 	struct listptr_s *next;
 } listptr_t;
-print_listint_safe;
+
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
