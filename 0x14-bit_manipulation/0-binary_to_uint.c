@@ -17,7 +17,7 @@ unsigned int result = 0;
 	if (b == NULL)
 	return (0);
 
-	for (i = strlen(b) - 1; i >= 0; i--)
+for (i = strlen(b) - 1; i >= 0; i--)
 	{
 if (b[i] != '0' && b[i] != '1')
 return (0);
