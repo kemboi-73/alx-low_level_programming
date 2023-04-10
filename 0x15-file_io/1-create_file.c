@@ -21,8 +21,10 @@ return (-1);
 if (text_content != NULL)
 	{
 	size_t length = strlen(text_content);
-	rstatus = write(fd, text_content, length);
-	if (rstatus == -1)
+
+rstatus = write(fd, text_content, length);
+
+if (rstatus == -1)
 	{
 	close(fd);
 	return (-1);
@@ -30,6 +32,7 @@ if (text_content != NULL)
 }
 
 	close(fd);
+
 return (1);
 }
 
